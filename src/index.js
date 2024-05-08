@@ -1,4 +1,4 @@
-import './styles.css';
+import "./styles.css";
 
 class CountdownTimer {
   constructor({ selector, targetDate }) {
@@ -28,7 +28,7 @@ class CountdownTimer {
   getTimeComponents(time) {
     const days = this.pad(Math.floor(time / (1000 * 60 * 60 * 24)));
     const hours = this.pad(
-      Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+      Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
     );
     const mins = this.pad(Math.floor((time % (1000 * 60 * 60)) / (1000 * 60)));
     const secs = this.pad(Math.floor((time % (1000 * 60)) / 1000));
@@ -36,7 +36,7 @@ class CountdownTimer {
   }
 
   pad(value) {
-    return String(value).padStart(2, '0');
+    return String(value).padStart(2, "0");
   }
 
   updateClockface({ days, hours, mins, secs }) {
@@ -48,6 +48,6 @@ class CountdownTimer {
 }
 
 const timer = new CountdownTimer({
-  selector: '#timer-1',
-  targetDate: new Date('Apr 20, 2022'),
+  selector: "#timer-1",
+  targetDate: new Date("Apr 20, 2025"),
 });
